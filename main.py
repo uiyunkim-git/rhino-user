@@ -4,7 +4,7 @@ import pandas as pd
 
 
 if __name__ == '__main__':
-
+    
     # Sample data for the DataFrame
     data = {
         'Column A': [1, 2, 3, 4, 5],
@@ -22,4 +22,8 @@ if __name__ == '__main__':
     csv_file_path = '/output/cohort_data.csv'
     df.to_csv(csv_file_path, index=False)
 
+    with open("/output/weight.pt","wb") as f:
+        f.write(numpy.array([1,2,3,4,5]).tobytes())
+    
+    
     print("DataFrame saved to CSV file:", csv_file_path)
